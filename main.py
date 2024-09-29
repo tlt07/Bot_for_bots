@@ -322,7 +322,9 @@ async def main():
     dp.message.register(process_new_bot_type, StateFilter(Form.new_bot_type))
     dp.message.register(process_remove_bot_type, StateFilter(Form.remove_bot_type))
     dp.message.register(process_set_group_id, StateFilter(Form.set_group_id))
-
+    # Удаляем вебхук перед запуском polling
+    await bot.delete_webhook(drop_pending_updates=True)
+    
     await dp.start_polling(bot)
 
 if __name__ == '__main__':
