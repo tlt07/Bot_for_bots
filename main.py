@@ -9,6 +9,8 @@ from aiogram.filters import Command, StateFilter
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
 from aiogram.fsm.state import State, StatesGroup
 
+load_dotenv()
+
 # Получение токена бота и идентификатора группы из Secret переменных
 API_TOKEN = os.environ['API_TOKEN']
 GROUP_ID = int(os.environ.get('GROUP_ID', '0'))  # Инициализируем GROUP_ID из файла данных или 0 по умолчанию
