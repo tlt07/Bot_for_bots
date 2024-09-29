@@ -10,7 +10,7 @@ from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
 from aiogram.fsm.state import State, StatesGroup
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(dotenv_path='/home/botuser/mybot/Dmitrii-Iudu/.env')
 
 # Получение токена бота и идентификатора группы из Secret переменных
 API_TOKEN = os.environ['API_TOKEN']
