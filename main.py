@@ -16,6 +16,8 @@ load_dotenv(dotenv_path='/home/botuser/mybot/Dmitrii-Iudu/.env')
 API_TOKEN = os.environ['API_TOKEN']
 GROUP_ID = int(os.environ.get('GROUP_ID', '0'))  # Инициализируем GROUP_ID из файла данных или 0 по умолчанию
 
+print(f"GROUP_ID is set to: {GROUP_ID}")
+
 # Список ID администраторов
 ADMIN_IDS = [103497276]  # Замените на реальные ID администраторов
 
